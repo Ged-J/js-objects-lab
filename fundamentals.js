@@ -12,7 +12,14 @@ const aCar = {
  },
 };
 
-console.log(aCar.owner + ' drives a ' +  aCar.type.make );
+aCar.mileage = 10000;
+aCar.colour = {
+    exterior: 'red',
+    interior: {texture: 'leather' , shade: 'cream' }
+
+}
+
+console.log(aCar.owner + " drives a " +  aCar.type.make );
 
 console.log(
 
@@ -22,5 +29,17 @@ console.log(
     aCar.registration.countyCode + 
     '-' + 
     aCar.registration.number
+
+);
+
+console.log(
+
+"it is a " +
+aCar.colour.exterior +
+" car, " +
+aCar.mileage +
+" mileage, with " +
+aCar.colour.interior.texture +
+" interior."
 
 );
